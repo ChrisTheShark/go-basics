@@ -3,7 +3,7 @@ package concurrency
 import "fmt"
 
 func main() {
-	output(square(generate(2, 4, 6)))
+	output(square(square(generate(2, 4, 6))))
 }
 
 func generate(nums ...int) <-chan int {
